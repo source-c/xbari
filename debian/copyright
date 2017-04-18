@@ -1,0 +1,7 @@
+This package is a part of the YaWM project.
+Main idea was originally taken from xbattbar by Suguru Yamaguchi which is currently
+maintained by Dmitry E. Oboukhov at Debian.
+The code itself was completely refactored and shrinked to satisfy YaWM paradigm.
+
+May be redistributed under the terms of the MIT license.
+

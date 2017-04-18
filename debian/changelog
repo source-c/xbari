@@ -1,0 +1,12 @@
+xbari (1.0.0) stable; urgency=low
+
+  * * Releases v1.0.0.
+
+ -- PiXy <ashtoreth@ukr.net>  Mon, 06 Oct 2014 17:29:35 +0300
+
+xbari (1.0.0~beta1) unstable; urgency=medium
+
+  * * Initial Release. (closes: #0000000)
+
+ -- PiXy <ashtoreth@ukr.net>  Thu, 25 Sep 2014 18:29:35 +0300
+

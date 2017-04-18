@@ -1,0 +1,30 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+$|=1;
+
+while (1) {
+    my $acpi;
+
+    die "Can not start acpi: $!\n" unless open $acpi, '-|', 'acpi', '-b', '-a';
+
+    my @acpi = <$acpi>;
+
+    my @battery =
+        grep { defined $_ and /^\d+$/ }
+        map { s/^.*\s+(\d+)%.*/$1/; $_ }
+        grep /Battery\s+\d+:/, @acpi;
+
+    die "Can not get battery level\n" unless @battery;
+
+    my $battery = 0;
+    $battery += $_ for @battery;
+    $battery /= @battery;
+
+    my $ac = grep /Adapter.*on-line/, @acpi;
+
+    printf "battery=%d, ac_line=%d\n", 
+        $battery, $ac;
+    sleep(10);
+}

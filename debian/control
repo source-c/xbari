@@ -1,0 +1,27 @@
+Source: xbari
+Section: x11
+Priority: optional
+Maintainer:  PiXy <ashtoreth@ukr.net>
+Build-Depends: debhelper (>> 5.0.0), libx11-dev
+Standards-Version: 3.9.3
+
+Package: xbari
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python
+Recommends: acpi
+Description: X11 simple indicator bar
+ XBar indicator displays the current input status in the X window
+ environment. Commonly used as a battery indicator (i.e. as a native
+ replacement for the xbattbar). Battery status in such case obtained
+ through any suitable external utility (or using one of the deployed
+ test-input-* helpers).
+ .
+ The indicator of this program is very simple: a simple bar
+ at the top/bottom/left/right of your display.
+ With its color, it indicates the input line status (on-line or
+ off-line), and current input level.
+ Also, if the mouse cursor enters the indicator window(bar), a popup
+ diagnosis window comes up in the center of your display showing the
+ current line status and level.
+ .
+ This package needs Python only for its internal test-input-* helpers.

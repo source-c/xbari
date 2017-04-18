@@ -1,0 +1,2 @@
+?package(xbari):needs="X11" section="Applications/System/Monitoring"\
+  title="XBarI" command="/usr/bin/xbari"

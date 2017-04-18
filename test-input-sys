@@ -1,0 +1,17 @@
+#!/usr/bin/python
+
+from time import sleep
+import sys
+
+while True:
+  ac = -1
+  with open("/sys/class/power_supply/ACAD/online") as fp:
+      ac = int(fp.read(1))
+
+  battery = -1
+  with open("/sys/class/power_supply/BAT1/capacity") as fp:
+      battery = int(fp.read())
+
+  sys.stdout.write("battery=%d, ac_line=%d\n"%(battery,ac))
+  sys.stdout.flush()
+  sleep (10)
